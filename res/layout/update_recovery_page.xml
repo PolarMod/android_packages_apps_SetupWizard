@@ -49,10 +49,6 @@
                         android:layout_height="wrap_content"
                         style="@style/SudItemTitle.GlifDescription"
                         android:text="@string/update_recovery_description" />
-                        android:layout_gravity="top"
-                        android:layout_marginTop="5dp"
-                        android:duplicateParentState="true"
-                        android:clickable="false" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -65,7 +61,6 @@
                         android:orientation="horizontal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-<<<<<<< HEAD
                         android:paddingLeft="@dimen/location_margin_left"
                         android:paddingRight="@dimen/content_margin_right"
                         android:background="?android:attr/selectableItemBackground"
@@ -87,18 +82,6 @@
                             style="@style/SudCheckBox.Multiline" />
 
                     </LinearLayout>
-=======
-                        android:layout_weight="1"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:lineSpacingExtra="@dimen/setup_line_spacing"
-                        android:gravity="top"
-                        android:layout_marginLeft="@dimen/location_text_margin_left"
-                        android:layout_marginRight="@dimen/location_text_margin_right"
-                        android:paddingBottom="@dimen/content_margin_bottom"
-                        android:text="@string/update_recovery_setting"
-                        android:maxLines="5" />
->>>>>>> parent of 459dec4... SetupWizard: center text next to checkbox in recovery update -activity
                 </LinearLayout>
             </ScrollView>
         </FrameLayout>
@@ -108,14 +91,5 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-<<<<<<< HEAD
     </LinearLayout>
 </com.google.android.setupdesign.GlifLayout>
-=======
-    <com.google.android.setupdesign.view.NavigationBar
-        android:id="@+id/navigation_bar"
-        style="@style/SudNavBarTheme"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/sud_navbar_height" />
-</LinearLayout>
->>>>>>> parent of 459dec4... SetupWizard: center text next to checkbox in recovery update -activity
