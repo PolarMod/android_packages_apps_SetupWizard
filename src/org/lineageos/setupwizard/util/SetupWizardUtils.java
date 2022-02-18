@@ -63,8 +63,6 @@ import org.lineageos.setupwizard.WifiSetupActivity;
 import org.lineageos.setupwizard.wizardmanager.WizardManager;
 
 import java.io.File;
-import org.lineageos.internal.util.PackageManagerUtils;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -75,7 +73,10 @@ public class SetupWizardUtils {
     private static final String GMS_PACKAGE = "com.google.android.gms";
     private static final String GMS_SUW_PACKAGE = "com.google.android.setupwizard";
     private static final String GMS_TV_SUW_PACKAGE = "com.google.android.tungsten.setupwraith";
+    private static final String UPDATER_PACKAGE = "org.lineageos.updater";
 
+    private static final String UPDATE_RECOVERY_EXEC = "/vendor/bin/install-recovery.sh";
+    private static final String CONFIG_HIDE_RECOVERY_UPDATE = "config_hideRecoveryUpdate";
     private static final String PROP_BUILD_DATE = "ro.build.date.utc";
 
     private SetupWizardUtils() {
@@ -135,10 +136,6 @@ public class SetupWizardUtils {
         } catch (PackageManager.NameNotFoundException | Resources.NotFoundException ignored) {
         }
         return !featureHidden;
-    public static boolean isMultiSimDevice(Context context) {
-        TelephonyManager tm =
-                (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        return tm.isMultiSimEnabled();
     }
 
     public static boolean isRadioReady(Context context, ServiceState state) {
